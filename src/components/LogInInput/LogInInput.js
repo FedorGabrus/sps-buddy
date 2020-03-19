@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './LoginInput.module.css';
+import styles from './LoginInput.module.scss';
 
 const logInInput = (props) => (
     <div className="form-group">
@@ -15,8 +15,6 @@ const logInInput = (props) => (
             onChange={props.onChangeHandler}/>
     </div>
 );
-
-
 
 logInInput.propTypes = {
     inputId: PropTypes.string,
