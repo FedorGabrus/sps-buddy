@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Loginmodule.scss';
-
 const logInInput = (props) => (
     <div className="form-group">
         <label htmlFor={props.inputId}>{props.label}</label>
         <input
-            className={[styles.Myinput, "form-control"].join(" ")}
+            className="form-control"
             id={props.inputId}
             type={props.inputType}
             placeholder={props.inputPlaceholder}
