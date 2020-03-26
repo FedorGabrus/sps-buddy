@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from '../../assets/images/tafe-logo.png';
 
-const Footer = (props) => {
+const footer = (props) => {
   return (
     <div id="footer-container">
       <div className="footer">
@@ -16,4 +16,4 @@ const Footer = (props) => {
   )
 };
 
-export default Footer;
+export default footer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './LoginInput.module.scss';
+import styles from './Loginmodule.scss';
 
 const logInInput = (props) => (
     <div className="form-group">
