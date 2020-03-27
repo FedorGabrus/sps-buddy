@@ -38,7 +38,7 @@ const EnrolmentView = (props) => {
   const [studyPlan, setStudyPlan] = useState([]);
   const [error, setError] = useState(null)
   const [showCourses, setShowCourses] = useState(false);
-  const [enrollingSemester, setEnrollingSemester] = useState('2020 S1');
+  const [enrollingSemester] = useState('2020 S1');
   const [selectedSubjects, setSelectedSubjects] = useState([]);
 
   // Displays error if any.

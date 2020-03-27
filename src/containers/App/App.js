@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 // import LogIn from '../LogInScreen/LogInScreen';
 import EnrolmentScreen from '../EnrolmentScreen/EnrolmentScreen';
 
