@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import LogInInput from '../../components/LogInInput/LogInInput';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 /**
  * Statefull component that represents user's log in form. Queries back end with
  * captured user's email and password and changes App state that tracks login state.
@@ -14,6 +15,7 @@ const LogIn = (props) => {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [helperText, setHelperText] = useState('');
   const [error, setError] = useState(false);
+
 
   /**
    * Updates userEmail state on Email input's value change.
