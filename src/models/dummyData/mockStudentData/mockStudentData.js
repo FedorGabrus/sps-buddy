@@ -105,7 +105,6 @@ const studentData = {
         },
         {
           semester: '2020 S2',
-          gradedSubjects: [],
           subjects: [
             {
               subjectCode: '5TSD',
