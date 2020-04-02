@@ -52,7 +52,7 @@ const EnrolmentView = (props) => {
   useEffect(() => {
     // Lets student to choose qualification.
     if (studentData.qualifications && studentData.qualifications.length > 0) {
-      // Retrieves qualification data and prevents original source from mutations. 
+      // Retrieves qualification data and prevents original source from mutations.
       const studentQualifications = studentData.qualifications.map(qualification => {
         return {
           qualificationName: qualification.qualificationName,
@@ -109,7 +109,7 @@ const EnrolmentView = (props) => {
 
   /**
    * Handles subject selection. Changes data in stdudy plan and selected courses.
-   * 
+   *
    * @param {string} semester - semester name
    * @param {string} nationalCode - subject national code
    */
@@ -142,7 +142,7 @@ const EnrolmentView = (props) => {
   return (
     <Fragment>
       {errorSection}
-      <h1>Enrolment</h1>
+      <h2>Enrolment</h2>
       <EnrolmentSettings
         student={student}
         availableQualifications={availableQualifications}

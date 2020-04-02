@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import PrerequisiteSubject from '../PrerequisiteSubject/PrerequisiteSubject';
 import ToggleSwitch from '../../UI/ToggleSwitch/ToggleSwitch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /**
  * Renders subject.
- * 
- * @param {*} props 
+ *
+ * @param {*} props
  *  {string} nationalCode - subject national code,
  *  {string} subjectName - subject name,
  *  {string} subjectCode - subject code,
@@ -65,7 +66,7 @@ const subject = (props) => {
 
       prerequisites = (
         <Fragment>
-          <h5>Unmet Prerequisites</h5>
+          <h5 class="unmet-title"><FontAwesomeIcon icon='exclamation-triangle' /> Unmet Prerequisites:</h5>
           <div className="d-flex justify-content-start flex-wrap">
             {prerequisitesList}
           </div>
@@ -97,13 +98,40 @@ const subject = (props) => {
       {switcher}
       {badge}
       {grade}
-      <div>Subject: {props.subjectCode} - {props.subjectName}</div>
-      <div>Competency: {props.competencyName}</div>
-      <div>Competency Type: {props.competencyType}</div>
-      <div>National Code: {props.nationalCode}</div>
-      <div>TAFE Code: {props.tafeCode}</div>
-      <div>Training Packcage: {props.trainingPackage}</div>
-      <div>Credits: {props.credits}</div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 class="course-title">{props.subjectCode} - {props.subjectName}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Competency: {props.competencyName}</p>
+        </div>
+        <div class="col-sm-6">
+          <p>Competency Type: {props.competencyType}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>National Code: {props.nationalCode}</p>
+        </div>
+        <div class="col-sm-6">
+          <p>TAFE Code: {props.tafeCode}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Training Packcage: {props.trainingPackage}</p>
+        </div>
+        <div class="col-sm-6">
+          <p>Credits: {props.credits}</p>
+        </div>
+      </div>
+
+
+
+
+
       {campus}
       {price}
       {prerequisites}

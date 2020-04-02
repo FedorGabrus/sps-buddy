@@ -1,0 +1,130 @@
+.mainContainer{
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.my-3{
+
+  background: $red;
+  color: white;
+  border: none;
+
+  .btn-link{
+
+    background: black;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+  }
+
+  .btn-primary{
+
+    background: black;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+
+    &:hover{
+
+      text-decoration: underline;
+
+    }
+
+  }
+
+  .btn-block{
+
+    background: $black;
+    border: 1px solid white;
+
+    &:hover{
+
+      background: $red;
+
+    }
+
+
+  }
+
+
+
+  .list-group-item{
+
+    background: $red;
+    border-bottom: 3px solid white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .badge-info{
+
+    background: $tan;
+    margin-bottom: 10px;
+
+  }
+
+  .badge-warning{
+
+    background: $grey;
+    margin-bottom: 10px;
+
+  }
+
+}
+
+.card-header{
+
+  background: $black!important;
+
+}
+
+.custom-control{
+
+  margin-bottom: 10px;
+
+
+}
+
+.custom-control-label::before{
+
+  background: $grey;
+
+}
+
+.custom-control-label::after{
+
+  background-color: $black!important;
+
+}
+
+.text-danger{
+
+  margin-left: 15px;
+  color: white!important;
+
+}
+
+.course-title{
+
+  margin-bottom: 20px;
+
+}
+
+.pr-3{
+
+  color: $black;
+
+}
+
+.unmet-title{
+
+  margin-top: 20px;
+  color: white;
+  border-top: 1px solid white;
+  padding-top: 20px;
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 /**
  * Represents header for a semester section.
- * @param {*} props
+ * @param {*} props 
  *  {string} value - value to display
  *  {bool} isActive - determines if header should be highlited
  */
