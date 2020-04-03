@@ -66,7 +66,7 @@ const subject = (props) => {
 
       prerequisites = (
         <Fragment>
-          <h5 class="unmet-title"><FontAwesomeIcon icon='exclamation-triangle' /> Unmet Prerequisites:</h5>
+          <h5 className="unmet-title"><FontAwesomeIcon icon='exclamation-triangle' /> Unmet Prerequisites:</h5>
           <div className="d-flex justify-content-start flex-wrap">
             {prerequisitesList}
           </div>
@@ -98,40 +98,35 @@ const subject = (props) => {
       {switcher}
       {badge}
       {grade}
-      <div class="row">
-        <div class="col-sm-12">
-          <h3 class="course-title">{props.subjectCode} - {props.subjectName}</h3>
+      <div className="row">
+        <div className="col-sm-12">
+          <h3 className="course-title">{props.subjectCode} - {props.subjectName}</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6">
+      <div className="row">
+        <div className="col-sm-6">
           <p>Competency: {props.competencyName}</p>
         </div>
-        <div class="col-sm-6">
+        <div className="col-sm-6">
           <p>Competency Type: {props.competencyType}</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6">
+      <div className="row">
+        <div className="col-sm-6">
           <p>National Code: {props.nationalCode}</p>
         </div>
-        <div class="col-sm-6">
+        <div className="col-sm-6">
           <p>TAFE Code: {props.tafeCode}</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-6">
+      <div className="row">
+        <div className="col-sm-6">
           <p>Training Packcage: {props.trainingPackage}</p>
         </div>
-        <div class="col-sm-6">
+        <div className="col-sm-6">
           <p>Credits: {props.credits}</p>
         </div>
       </div>
-
-
-
-
-
       {campus}
       {price}
       {prerequisites}

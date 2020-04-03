@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Semester from '../Semester/Semester';
+import Semester from '../../containers/Semester/Semester';
 import Subject from './Subject/Subject';
 
 /**
