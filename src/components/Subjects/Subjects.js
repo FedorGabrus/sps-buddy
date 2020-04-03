@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Semester from '../../containers/Semester/Semester';
-import Subject from './Subject/Subject';
+import Subject from '../../containers/Subject/Subject';
 
 /**
  * Renders student's subjects.
@@ -22,8 +22,6 @@ const subjects = (props) => {
   }
 
   const priceFormater = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
-
-
 
   const semestersSection = props.studyPlan.map(semester => {
     const semesterSubjects = semester.subjects.map(subject => (
