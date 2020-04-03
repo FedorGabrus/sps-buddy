@@ -144,7 +144,7 @@ const Subject = (props) => {
       <div className='row'>
         {switcher}
         <div className='col'>
-          <p>Competency: {props.competencyName}</p>
+          <p className='lead'>{props.competencyName}</p>
           {campus}
           {showHideDetailsButton}
           <SubjectAdditionalDetails
