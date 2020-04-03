@@ -7,11 +7,13 @@ import EnrolmentScreen from '../EnrolmentScreen/EnrolmentScreen';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
-  faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle
+  faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
+  faLongArrowAltLeft
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
-   faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle
+   faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
+   faLongArrowAltLeft
    );
 
 
