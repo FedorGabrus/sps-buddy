@@ -14,8 +14,10 @@
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
+    "react-animate-height": "^2.0.20",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "react-toggle": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

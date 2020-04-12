@@ -1,28 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Toggle from 'react-toggle';
+import "react-toggle/style.css";
 
 /**
  * Toggle switch UI element from Bootstrap.
  * 
- * @param {*} props switchID - compulsory unique string id to comply with html requirements,
- *                  isChecked - boolean represents current state (on/off),
+ * @param {*} props isChecked - boolean represents current state (on/off),
  *                  switchToggledHandler - function that handles click on a switcher,
  *                  label - optional string label for switch.
  */
 const toggleSwitch = (props) => (
-  <div className="custom-control custom-switch">
-    <input
-      type="checkbox"
-      className="custom-control-input"
-      id={props.switchId}
+  <label>
+    <Toggle
       checked={props.isChecked}
-      onChange={props.switchToggledHandler} />
-    <label className="custom-control-label" htmlFor={props.switchId}>{props.label}</label>
-  </div>
+      onChange={props.switchToggledHandler}
+    />
+    <span>{props.label}</span>
+  </label>
 );
 
 toggleSwitch.propTypes = {
-  switchId: PropTypes.string.isRequired,
   isChecked: PropTypes.bool,
   switchToggledHandler: PropTypes.func,
   label: PropTypes.string,
