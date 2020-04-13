@@ -5,8 +5,8 @@ import EnrolmentSummarySubject from './EnrolmentSummarySubject/EnrolmentSummaryS
 
 /**
  * Short enrolment summary. Appears when at least one subject selected.
- * 
- * @param {*} props 
+ *
+ * @param {*} props
  *  {array} selectedSubjects - array of selected subjects,
  *  {number} minNumberOfCourses - min number of courses for the selected type of student,
  *  {func} subjectSelectionChangedHandler - handler to remove subject from selection,

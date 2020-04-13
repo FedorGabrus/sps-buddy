@@ -2,18 +2,19 @@
 
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 500px;
 
 }
 
 .my-3{
 
-  background: $red;
-  color: white;
+  background: $light-grey;
+  color: black;
   border: none;
 
   .btn-link{
 
-    background: black;
+    background: $black;
     color: white;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -22,7 +23,7 @@
 
   .btn-primary{
 
-    background: black;
+    background: $black;
     color: white;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -54,7 +55,7 @@
 
   .list-group-item{
 
-    background: $red;
+    background: $light-grey;
     border-bottom: 3px solid white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -80,6 +81,7 @@
 .card-header{
 
   background: $black!important;
+  color: white;
 
 }
 
@@ -124,7 +126,19 @@
 .unmet-title{
 
   margin-top: 20px;
-  color: white;
+  color: $red;
   border-top: 1px solid white;
   padding-top: 20px;
+}
+
+.text-success{
+
+  color: $red!important;
+
+}
+
+.open-enrolment-true{
+
+  background: $red!important;
+
 }

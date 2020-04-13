@@ -17,6 +17,7 @@
     "react-animate-height": "^2.0.20",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
+    "react-sticky": "^6.0.3",
     "react-toggle": "^4.1.1"
   },
   "scripts": {

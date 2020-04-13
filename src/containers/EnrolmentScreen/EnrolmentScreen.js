@@ -35,12 +35,12 @@ const EnrolmentView = (props) => {
       minNumberOfCourses: 2,
     }
   ]);
-  const [studyPlan, setStudyPlan] = useState([]);
+
   const [error, setError] = useState(null)
   const [showCourses, setShowCourses] = useState(false);
   const [enrollingSemester] = useState('2020 S1');
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
-
+  //const [selectedSubjects, setSelectedSubjects] = useState([]);
+  //const [studyPlan, setStudyPlan] = useState([]);
   // Displays error if any.
   const errorSection = (error)
     ? (
@@ -83,7 +83,7 @@ const EnrolmentView = (props) => {
 
     if (selectedStudyPlan) {
       const newStudyPlan = [...selectedStudyPlan];
-      setStudyPlan(newStudyPlan);
+      props.setStudyPlan(newStudyPlan);
       let preselectedSubjects = [];
       newStudyPlan.forEach(semester => {
         const semesterPreselectedSubjects = semester.subjects.filter(subject => {
@@ -99,45 +99,17 @@ const EnrolmentView = (props) => {
           preselectedSubjects = preselectedSubjects.concat(semesterPreselectedSubjects);
         }
       });
-      setSelectedSubjects(preselectedSubjects);
+      props.setSelectedSubjects(preselectedSubjects);
     } else {
-      setSelectedSubjects([]);
-      setStudyPlan([]);
+      props.setSelectedSubjects([]);
+      props.setStudyPlan([]);
       setError('No subhects to enrol');
     }
   }
 
-  /**
-   * Handles subject selection. Changes data in stdudy plan and selected courses.
-   *
-   * @param {string} semester - semester name
-   * @param {string} nationalCode - subject national code
-   */
-  const subjectSelectionChangedHandler = (semester, nationalCode) => {
-    setStudyPlan(oldState => {
-      // Needs to create a new study plan list to trigger rerenderring as
-      // selection changes happen in subject object that passes by reference.
-      const newState = [...oldState];
-      const selectedSemester = newState.find(studyPlanSemester => studyPlanSemester.semester === semester);
-      const selectedSemesterSubject = selectedSemester.subjects.find(subject => subject.nationalCode === nationalCode);
-      selectedSemesterSubject.selected = !selectedSemesterSubject.selected;
 
-      // Updates selected subjects.
-      setSelectedSubjects(oldSelection => {
-        const newSelection = [...oldSelection];
-        if (selectedSemesterSubject.selected) {
-          // Adds semester name to the selected subject.
-          selectedSemesterSubject.parentSemester = semester;
-          newSelection.push(selectedSemesterSubject);
-        } else {
-          return newSelection.filter(subject => subject.nationalCode !== nationalCode);
-        }
-        return newSelection;
-      });
 
-      return newState;
-    });
-  };
+
 
   return (
     <Fragment>
@@ -155,20 +127,20 @@ const EnrolmentView = (props) => {
         getStudyPlanForSelectedQualification={getStudyPlanForSelectedQualification}
         showCourses={showCourses}
         setShowCourses={setShowCourses}
-        setSelectedSubjects={setSelectedSubjects}
-        setStudyPlan={setStudyPlan}
+        setSelectedSubjects={props.setSelectedSubjects}
+        setStudyPlan={props.setStudyPlan}
       />
       <Subjects
         showCourses={showCourses}
-        studyPlan={studyPlan}
+        studyPlan={props.studyPlan}
         enrollingSemester={enrollingSemester}
-        subjectSelectionChangedHandler={subjectSelectionChangedHandler}
+        subjectSelectionChangedHandler={props.subjectSelectionChangedHandler}
       />
       <EnrolmentSummary
         showCourses={showCourses}
-        selectedSubjects={selectedSubjects}
+        selectedSubjects={props.selectedSubjects}
         minNumberOfCourses={(student.studentType) ? student.studentType.minNumberOfCourses : -1}
-        subjectSelectionChangedHandler={subjectSelectionChangedHandler}
+        subjectSelectionChangedHandler={props.subjectSelectionChangedHandler}
       />
     </Fragment>
   );

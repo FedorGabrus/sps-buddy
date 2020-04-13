@@ -18,16 +18,16 @@ const semesterHeader = (props) => {
   if (props.isActive) {
     headerContent = (
       <Fragment>
-        {props.value}
-        <FontAwesomeIcon icon='long-arrow-alt-left' className='mx-2'/>
-        <span>Open For Enrolment</span>
+          {props.value}
+          <FontAwesomeIcon icon='long-arrow-alt-left' className='mx-2'/>
+          <span>Open For Enrolment</span>
       </Fragment>
     );
   }
 
   return (
     <div
-      className={[styles.SemesterHeader, 'card-header', 'd-flex'].join(' ')}
+      className={[styles.SemesterHeader, 'card-header', 'd-flex', 'open-enrolment-' + props.isActive].join(' ')}
       onClick={props.onShowHideSubjectsClickEventHandler}
     >
       <div className="mr-auto">
