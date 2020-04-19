@@ -39,9 +39,39 @@ const Subject = (props) => {
   let badge = null;
   // Case subject graded.
   if (props.grade) {
-    badge = (
-      <h5><span className="badge badge-info">Graded</span></h5>
-    );
+
+    if(props.grade == "Credit"){
+
+      badge = (
+        <h5><span className="badge badge-info">Graded - C</span></h5>
+      );
+
+    }
+
+    else if(props.grade == "Distinction"){
+
+      badge = (
+        <h5><span className="badge badge-success">Graded - D</span></h5>
+      );
+
+    }
+
+    else if(props.grade == "Fail"){
+
+      badge = (
+        <h5><span className="badge badge-danger">Graded - F</span></h5>
+      );
+
+    }
+
+    else {
+
+      badge = (
+        <h5><span className="badge badge-primary">Graded</span></h5>
+      );
+
+    }
+
     grade = (
       <h3>{props.grade}</h3>
     );
@@ -81,7 +111,7 @@ const Subject = (props) => {
     } else {
       // Else subject is selectable.
       switcher = (
-        <div className="col-sm-1 d-flex align-items-center justify-content-center">
+        <div className="col-sm-1 d-flex justify-content-center">
           <ToggleSwitch
             isChecked={props.selected}
             switchToggledHandler={props.subjectSelectionChangedHandler.bind(this, props.semester, props.nationalCode)}
@@ -90,7 +120,7 @@ const Subject = (props) => {
       );
 
       selectButton = (
-        <div className='col-sm-2 d-flex flex-column align-items-center justify-content-center'>
+        <div className='col-sm-2 d-flex flex-column justify-content-center'>
           <button
             className="btn btn-primary btn-lg btn-block"
             onClick={props.subjectSelectionChangedHandler.bind(this, props.semester, props.nationalCode)}
@@ -109,7 +139,7 @@ const Subject = (props) => {
   const showHideDetailsButton = (
     <div>
       <button
-        className='btn btn-link'
+        className='btn btn-link course-details-button'
         onClick={showDetailsButtonClickHandler}
       >
         {(showInfo)

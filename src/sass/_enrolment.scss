@@ -8,18 +8,45 @@
 
 .my-3{
 
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.change-button{
+
+  color: $red;
+  padding-left: 0px;
+
+  &:hover{
+
+    color: $black;
+
+  }
+
+}
+
+.course-details-button{
+
+  color: $dark-grey;
+  padding-left: 0px;
+  text-decoration: underline;
+  margin-top: 20px;
+
+  &:hover{
+
+    color: $red;
+
+  }
+
+}
+
+.my-3{
+
   background: $light-grey;
   color: black;
   border: none;
-
-  .btn-link{
-
-    background: $black;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-  }
 
   .btn-primary{
 
@@ -51,8 +78,6 @@
 
   }
 
-
-
   .list-group-item{
 
     background: $light-grey;
@@ -62,19 +87,12 @@
 
   }
 
-  .badge-info{
+  .badge{
 
-    background: $tan;
-    margin-bottom: 10px;
-
-  }
-
-  .badge-warning{
-
-    background: $grey;
-    margin-bottom: 10px;
+      margin-bottom: 10px;
 
   }
+
 
 }
 

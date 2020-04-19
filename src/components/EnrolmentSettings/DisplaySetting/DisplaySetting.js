@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 /**
  * Renders captured setting.
- * 
- * @param {*} props 
+ *
+ * @param {*} props
  *  {number} numberOfOptions - number of options available for this setting,
  *  {func} changeButtonClickHandler - handles change button click
  *  {obj} displayObject - object to display.
@@ -18,7 +18,7 @@ const displaySetting = (props) => {
     buttonToChangeSetting = (
       <button
         type='button'
-        className='btn btn-link'
+        className='btn btn-link change-button'
         onClick={props.changeButtonClickHandler}>Change</button>
     );
   }
@@ -31,8 +31,14 @@ const displaySetting = (props) => {
 
   return (
     <Fragment>
-      {displayView}
-      {buttonToChangeSetting}
+      <div className="row student-data-row">
+        <div className="col-sm-9">
+          {displayView}
+        </div>
+        <div className="col-sm-3">
+          {buttonToChangeSetting}
+        </div>
+    </div>
     </Fragment>
   );
 };
