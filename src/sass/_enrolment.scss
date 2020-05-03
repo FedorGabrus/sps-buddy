@@ -1,3 +1,9 @@
+.summary-card-header{
+
+  border-bottom: 2px solid white;
+
+}
+
 .mainContainer{
 
   padding-top: 50px;
@@ -6,7 +12,7 @@
 
 }
 
-.my-3{
+.student-data-row{
 
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -25,6 +31,12 @@
 
   }
 
+  &:active{
+
+    color: $black!important;
+
+  }
+
 }
 
 .course-details-button{
@@ -37,6 +49,12 @@
   &:hover{
 
     color: $red;
+
+  }
+
+  &:active{
+
+    color: $red!important;
 
   }
 
@@ -58,7 +76,13 @@
 
     &:hover{
 
-      text-decoration: underline;
+      text-decoration: none;
+
+    }
+
+    &:active{
+
+      background: $red!important;
 
     }
 
@@ -72,6 +96,12 @@
     &:hover{
 
       background: $red;
+
+    }
+
+    &:active{
+
+      background: $red!important;
 
     }
 

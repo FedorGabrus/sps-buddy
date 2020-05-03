@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import EnrolmentSummarySubject from './EnrolmentSummarySubject/EnrolmentSummarySubject';
 
-/**
+/*
  * Short enrolment summary. Appears when at least one subject selected.
  *
  * @param {*} props
@@ -12,6 +12,9 @@ import EnrolmentSummarySubject from './EnrolmentSummarySubject/EnrolmentSummaryS
  *  {func} subjectSelectionChangedHandler - handler to remove subject from selection,
  *  {bool} showCourses - determines visibility.
  */
+
+const priceFormater = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
+
 const enrolmentSummary = (props) => {
 
   // Displays component only with courses list.
@@ -22,6 +25,7 @@ const enrolmentSummary = (props) => {
   let subjects = null;
   let confirmButton = null;
 
+
   // Displays selected course and confirm button only when at least one course is selected..
   if (props.selectedSubjects && props.selectedSubjects.length > 0) {
     subjects = props.selectedSubjects.map(subject => (
@@ -29,36 +33,50 @@ const enrolmentSummary = (props) => {
         <EnrolmentSummarySubject
           subjectCode={subject.subjectCode}
           subjectName={subject.subjectName}
+          subjectPrice={subject.price}
           removeSubject={props.subjectSelectionChangedHandler
             .bind(this, subject.parentSemester, subject.nationalCode)}
         />
       </li>
+
+
     ));
+
+
 
     confirmButton = (
       <button className='btn btn-success btn-lg btn-block'>Confirm</button>
     );
+
   }
 
   return (
     <section>
       <div className='card shadow my-3'>
-        <div className='card-body'>
-          <h3 className='card-title'>Selected subjects</h3>
+        <div className='card-body summary-card-header'>
+          <h3 className='card-title'>Selected subjects:</h3>
           <p className='card-text'>
             You have selected {props.selectedSubjects.length} of {props.minNumberOfCourses} required courses.
           </p>
+          <p className='card-text'>
+            Your total is {priceFormater.format(props.selectedSubjects.reduce((total, current) => total + current.price,0))}
+          </p>
         </div>
+
         <ul className='list-group list-group-flush'>
           {subjects}
         </ul>
+
         <div className='card-body'>
           {confirmButton}
         </div>
+
       </div>
     </section>
   );
 };
+
+
 
 enrolmentSummary.propTypes = {
   selectedSubjects: PropTypes.array,
@@ -66,5 +84,7 @@ enrolmentSummary.propTypes = {
   subjectSelectionChangedHandler: PropTypes.func,
   showCourses: PropTypes.bool,
 };
+
+
 
 export default enrolmentSummary;

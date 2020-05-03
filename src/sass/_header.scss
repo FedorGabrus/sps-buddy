@@ -3,8 +3,6 @@
 
   .header-main{
 
-    /*padding: 10px;
-    background: rgba(190,20,40, 0.9);*/
     display: none;
 
     #logo-container{
@@ -54,12 +52,41 @@
   border-bottom: 5px solid $red;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
 
   h1{
 
     font-size: 24px;
     padding-left: 25px;
     margin-top: 15px;
+
+  }
+
+  .cartIconWrapper{
+
+    float: right;
+    cursor: pointer;
+    margin-top: -35px;
+
+  }
+
+}
+
+.close-button{
+
+  background: $red;
+  color: white;
+  border: none;
+
+  &:hover{
+
+    background: $black;
+
+  }
+
+  &:active{
+
+    background: $black;
 
   }
 

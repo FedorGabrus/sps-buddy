@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 import Layout from '../../components/Layout/Layout';
 import LogIn from '../LogInScreen/LogInScreen';
 import EnrolmentScreen from '../EnrolmentScreen/EnrolmentScreen';
@@ -9,12 +8,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
   faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
-  faLongArrowAltLeft
+  faLongArrowAltLeft, faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
    faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
-   faLongArrowAltLeft
+   faLongArrowAltLeft, faShoppingCart
    );
 
 
@@ -64,8 +63,6 @@ const App = (props) => {
     currentView = <EnrolmentScreen subjectSelectionChangedHandler={subjectSelectionChangedHandler} setSelectedSubjects={setSelectedSubjects} selectedSubjects={selectedSubjects} studyPlan={studyPlan} setStudyPlan={setStudyPlan}/>
 
   }
-
-
 
   return (
     <Layout subjectSelectionChangedHandler={subjectSelectionChangedHandler} setSelectedSubjects={setSelectedSubjects} selectedSubjects={selectedSubjects} studyPlan={studyPlan} setStudyPlan={setStudyPlan}>
