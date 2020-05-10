@@ -9,6 +9,20 @@ $tan: #be7c4d;
 $orange: #be5a38;
 $grey: #d3d0cb;
 
+$medium: 991px;
+$small: 767px;
+$mobile: 575px;
+
+$transition: all 0.5s ease-in;
+
+@mixin centerBackgroundImage{
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 /* global */
 
 /* import font from google (same as TAFE SA site)*/
@@ -21,6 +35,8 @@ body{
 }
 
 a{
+
+  transition: $transition;
 
   &:hover{
 
@@ -38,3 +54,4 @@ a{
 @import 'login';
 @import 'footer';
 @import 'enrolment';
+@import 'landing';

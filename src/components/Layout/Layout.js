@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import EnrolmentSummary from '../EnrolmentSummary/EnrolmentSummary';
 import Subject from '../Subjects/Subjects';
 import Cart from '../Cart/Cart';
+import LandingPage from '../LandingPage/LandingPage';
 
 const Layout = (props) => {
 
@@ -12,18 +13,27 @@ const Layout = (props) => {
     <Fragment>
        <Sticky className="stickyContent">
 
-        <Header />
+          <Header />
 
-          <p className='card-text'>
-            You have selected {props.selectedSubjects.length} courses.
-          </p>
-          <p className='card-text'>
-            Cost: {props.selectedSubjects.reduce((total, current) => total + current.price,0)}
-          </p>
+            {/*
+            <p className='card-text'>
+              You have selected {props.selectedSubjects.length} courses.
+            </p>
+            <p className='card-text'>
+              Cost: {props.selectedSubjects.reduce((total, current) => total + current.price,0)}
+            </p>
+            */}
 
       </Sticky>
 
-      <main className="container mainContainer">{props.children}</main>
+      <LandingPage />
+
+      <main className="container mainContainer">
+
+        {props.children}
+
+      </main>
+
 
 
       <Footer />
