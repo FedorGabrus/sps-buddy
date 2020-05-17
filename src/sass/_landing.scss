@@ -89,17 +89,20 @@
     &:hover{
 
       background: rgba(190,20,40, 0.6);
+      box-shadow: 0 1rem 3rem rgb(0, 0, 0.3);
 
 
       h2{
 
         font-size: 12px!important;
+        transition: $transition;
 
       }
 
       p{
 
         display: block!important;
+        transition: $transition;
 
       }
 
@@ -158,16 +161,21 @@
     &:hover{
 
       background: rgba(0,0,0, 0.6);
+      box-shadow: 0 1rem 3rem rgb(0, 0, 0.3);
 
       h2{
 
         font-size: 12px!important;
+        transition: $transition;
+
 
       }
 
       p{
 
         display: block!important;
+        transition: $transition;
+
 
       }
 

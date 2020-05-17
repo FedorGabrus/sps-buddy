@@ -18,6 +18,8 @@ const LandingPage = ({ component }) => {
   var thirdHeader;
   var thirdIcon;
 
+
+
   if(viewClassName === false){
 
     currentView = "Lecturer";
