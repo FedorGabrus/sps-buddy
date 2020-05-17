@@ -55,6 +55,15 @@
 
       }
 
+      p{
+
+        color: white;
+        font-size: 56px;
+        text-align: center;
+        display: none;
+
+      }
+
     }
 
   }
@@ -80,6 +89,19 @@
     &:hover{
 
       background: rgba(190,20,40, 0.6);
+
+
+      h2{
+
+        font-size: 12px!important;
+
+      }
+
+      p{
+
+        display: block!important;
+
+      }
 
     }
 
@@ -136,6 +158,18 @@
     &:hover{
 
       background: rgba(0,0,0, 0.6);
+
+      h2{
+
+        font-size: 12px!important;
+
+      }
+
+      p{
+
+        display: block!important;
+
+      }
 
     }
 

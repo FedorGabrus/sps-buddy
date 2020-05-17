@@ -8,12 +8,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
   faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
-  faLongArrowAltLeft, faShoppingCart
+  faLongArrowAltLeft, faShoppingCart, faUsers, faProjectDiagram, faBookOpen, faCalendarCheck, faChalkboardTeacher, faUserPlus
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faChevronRight, faChevronLeft, faEnvelope, faTimes, faBan,
    faExclamationTriangle, faChevronUp, faChevronDown, faMinus, faPlus, faCircle,
-   faLongArrowAltLeft, faShoppingCart
+   faLongArrowAltLeft, faShoppingCart, faUsers, faProjectDiagram, faBookOpen, faCalendarCheck, faChalkboardTeacher, faUserPlus
    );
 
 

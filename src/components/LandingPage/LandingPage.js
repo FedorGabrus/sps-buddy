@@ -10,18 +10,24 @@ const LandingPage = ({ component }) => {
   var currentView;
   var prevView;
 
-  //headings change based on view
+  //headings & icons change based on view
   var firstHeader;
+  var firstIcon;
   var secondHeader;
+  var secondIcon;
   var thirdHeader;
+  var thirdIcon;
 
   if(viewClassName === false){
 
     currentView = "Lecturer";
     prevView = "Student";
     firstHeader = "Look Up Student";
+    firstIcon = "users";
     secondHeader = "Look Up Subject";
+    secondIcon = "book-open";
     thirdHeader = "My Classes";
+    thirdIcon = "chalkboard-teacher";
 
   }
 
@@ -30,8 +36,11 @@ const LandingPage = ({ component }) => {
     currentView = "Student";
     prevView = "Lecturer";
     firstHeader = "Current Training Plan";
+    firstIcon = "project-diagram";
     secondHeader = "Enrolment Session";
+    secondIcon = "user-plus";
     thirdHeader = "My Schedule";
+    thirdIcon = "calendar-check";
 
   }
 
@@ -59,7 +68,10 @@ const LandingPage = ({ component }) => {
             <div className="col-md-4 first">
               <div className="wrapper">
                 <div class="overlay">
-                  <h2>{firstHeader}</h2>
+                  <div>
+                    <h2>{firstHeader}</h2>
+                    <p><FontAwesomeIcon icon={firstIcon} /></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -67,7 +79,10 @@ const LandingPage = ({ component }) => {
             <div className="col-md-4 second">
               <div className="wrapper">
                 <div class="overlay">
-                  <h2>{secondHeader}</h2>
+                  <div>
+                    <h2>{secondHeader}</h2>
+                    <p><FontAwesomeIcon icon={secondIcon} /></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -75,7 +90,10 @@ const LandingPage = ({ component }) => {
             <div className="col-md-4 third">
               <div className="wrapper">
                 <div class="overlay">
-                  <h2>{thirdHeader}</h2>
+                  <div>
+                    <h2>{thirdHeader}</h2>
+                    <p><FontAwesomeIcon icon={thirdIcon} /></p>
+                  </div>
                 </div>
               </div>
             </div>
