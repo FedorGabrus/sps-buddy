@@ -75,6 +75,8 @@ const studentData = {
               trainingPackage: 'LE',
               credits: 60,
               price: 357.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Monday 3:00 PM", "Wednesday 9:00 AM"],
               selected: false,
             },
             {
@@ -87,6 +89,8 @@ const studentData = {
               trainingPackage: 'C',
               credits: 80,
               price: 476.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Tuesday 1:00 PM", "Wednesday 11:00 AM"],
               selected: false,
             },
             {
@@ -99,6 +103,8 @@ const studentData = {
               trainingPackage: 'LE',
               credits: 80,
               price: 476.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Thursday 3:00 PM", "Friday 11:00 AM"],
               selected: false,
             }
           ],
@@ -116,6 +122,8 @@ const studentData = {
               trainingPackage: 'C',
               credits: 60,
               price: 357.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Thursday 3:00 PM", "Friday 11:00 AM"],
               selected: false,
             },
             {
@@ -128,6 +136,8 @@ const studentData = {
               trainingPackage: 'C',
               credits: 40,
               price: 238.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Thursday 3:00 PM", "Friday 11:00 AM"],
               selected: false,
             },
             {
@@ -140,6 +150,8 @@ const studentData = {
               trainingPackage: 'E',
               credits: 30,
               price: 178.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Thursday 3:00 PM", "Friday 11:00 AM"],
               prerequisites: [
                 {
                   subjectCode: '5JAW',
@@ -160,6 +172,8 @@ const studentData = {
               trainingPackage: 'LE',
               credits: 60,
               price: 357.00,
+              time:'Monday 3:00 PM',
+              scheduleTimes:[ "Thursday 3:00 PM", "Friday 11:00 AM"],
               prerequisites: [
                 {
                   subjectCode: '5JAW',

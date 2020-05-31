@@ -210,6 +210,7 @@ Subject.propTypes = {
   selected: PropTypes.bool,
   subjectSelectionChangedHandler: PropTypes.func,
   semester: PropTypes.string,
+  time: PropTypes.string,
 };
 
 export default Subject;

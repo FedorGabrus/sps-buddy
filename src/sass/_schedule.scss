@@ -1,0 +1,47 @@
+.table-striped{
+
+  thead{
+
+    background: $red;
+    color: white;
+
+    tr{
+
+      th{
+
+        border: 1px solid white;
+
+      }
+
+    }
+
+  }
+
+  tbody{
+
+    tr{
+
+      &:hover{
+
+        background: $black;
+        color: white;
+
+      }
+
+      td{
+
+        input{
+
+          margin-left: 8px;
+
+        }
+
+      }
+
+
+
+    }
+
+  }
+
+}

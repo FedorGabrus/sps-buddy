@@ -6,6 +6,7 @@ import EnrolmentSummary from '../EnrolmentSummary/EnrolmentSummary';
 import Subject from '../Subjects/Subjects';
 import Cart from '../Cart/Cart';
 import LandingPage from '../LandingPage/LandingPage';
+import ScheduleSelection from '../ScheduleSelection/ScheduleSelection';
 
 const Layout = (props) => {
 
@@ -33,6 +34,8 @@ const Layout = (props) => {
         {props.children}
 
       </main>
+
+      
 
 
 

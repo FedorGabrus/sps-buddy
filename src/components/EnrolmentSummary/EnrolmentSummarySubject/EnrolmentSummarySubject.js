@@ -34,6 +34,7 @@ enrolmentSummarySubject.propTypes = {
   subjectCode: PropTypes.string,
   subjectName: PropTypes.string,
   subjectPrice: PropTypes.number,
+  subjectSchedule: PropTypes.string
 };
 
 

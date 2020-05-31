@@ -4,6 +4,7 @@ import Subjects from '../../components/Subjects/Subjects';
 import EnrolmentSettings from '../../components/EnrolmentSettings/EnrolmentSettings';
 import ErrorView from '../../components/ErrorView/ErrorView';
 import EnrolmentSummary from '../../components/EnrolmentSummary/EnrolmentSummary';
+import ScheduleSelection from '../../components/ScheduleSelection/ScheduleSelection';
 
 // Rough representation of the server response.
 import studentData from '../../models/dummyData/mockStudentData/mockStudentData';
@@ -142,6 +143,15 @@ const EnrolmentView = (props) => {
         minNumberOfCourses={(student.studentType) ? student.studentType.minNumberOfCourses : -1}
         subjectSelectionChangedHandler={props.subjectSelectionChangedHandler}
       />
+
+      <ScheduleSelection
+        showCourses={showCourses}
+        selectedSubjects={props.selectedSubjects}
+        subjectSelectionChangedHandler={props.subjectSelectionChangedHandler}
+
+
+      />
+
     </Fragment>
   );
 };
