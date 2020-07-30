@@ -1,0 +1,192 @@
+.summary-card-header{
+
+  border-bottom: 2px solid white;
+
+}
+
+.mainContainer{
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 500px;
+
+}
+
+.student-data-row{
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.change-button{
+
+  color: $red;
+  padding-left: 0px;
+
+  &:hover{
+
+    color: $black;
+
+  }
+
+  &:active{
+
+    color: $black!important;
+
+  }
+
+}
+
+.course-details-button{
+
+  color: $dark-grey;
+  padding-left: 0px;
+  text-decoration: underline;
+  margin-top: 20px;
+
+  &:hover{
+
+    color: $red;
+
+  }
+
+  &:active{
+
+    color: $red!important;
+
+  }
+
+}
+
+.my-3{
+
+  background: $light-grey;
+  color: black;
+  border: none;
+
+  .btn-primary{
+
+    background: $black;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+
+    &:hover{
+
+      text-decoration: none;
+
+    }
+
+    &:active{
+
+      background: $red!important;
+
+    }
+
+  }
+
+  .btn-block{
+
+    background: $black;
+    border: 1px solid white;
+
+    &:hover{
+
+      background: $red;
+
+    }
+
+    &:active{
+
+      background: $red!important;
+
+    }
+
+
+  }
+
+  .list-group-item{
+
+    background: $light-grey;
+    border-bottom: 3px solid white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .badge{
+
+      margin-bottom: 10px;
+
+  }
+
+
+}
+
+.card-header{
+
+  background: $black!important;
+  color: white;
+
+}
+
+.custom-control{
+
+  margin-bottom: 10px;
+
+
+}
+
+.custom-control-label::before{
+
+  background: $grey;
+
+}
+
+.custom-control-label::after{
+
+  background-color: $black!important;
+
+}
+
+.text-danger{
+
+  margin-left: 15px;
+  color: white!important;
+
+}
+
+.course-title{
+
+  margin-bottom: 20px;
+
+}
+
+.pr-3{
+
+  color: $black;
+
+}
+
+.unmet-title{
+
+  margin-top: 20px;
+  color: $red;
+  border-top: 1px solid white;
+  padding-top: 20px;
+}
+
+.text-success{
+
+  color: $red!important;
+
+}
+
+.open-enrolment-true{
+
+  background: $red!important;
+
+}

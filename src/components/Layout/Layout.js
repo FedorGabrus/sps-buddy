@@ -1,14 +1,46 @@
-import React, { Fragment } from 'react';
-
+import React, {useState, Fragment } from 'react';
+import Sticky from '../UI/Sticky/Sticky.js';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import EnrolmentSummary from '../EnrolmentSummary/EnrolmentSummary';
+import Subject from '../Subjects/Subjects';
+import Cart from '../Cart/Cart';
+import LandingPage from '../LandingPage/LandingPage';
+import ScheduleSelection from '../ScheduleSelection/ScheduleSelection';
 
 const Layout = (props) => {
+
   return (
     <Fragment>
-      <Header />
-      <main className="container">{props.children}</main>
+       <Sticky className="stickyContent">
+
+          <Header />
+
+            {/*
+            <p className='card-text'>
+              You have selected {props.selectedSubjects.length} courses.
+            </p>
+            <p className='card-text'>
+              Cost: {props.selectedSubjects.reduce((total, current) => total + current.price,0)}
+            </p>
+            */}
+
+      </Sticky>
+
+      <LandingPage />
+
+      <main className="container mainContainer">
+
+        {props.children}
+
+      </main>
+
+      
+
+
+
       <Footer />
+
     </Fragment>
   );
 };

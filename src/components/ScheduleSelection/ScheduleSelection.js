@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import EnrolmentSummarySubject from './EnrolmentSummarySubject/EnrolmentSummarySubject';
+import EnrolmentSummary from '../EnrolmentSummary/EnrolmentSummary';
+import EnrolmentSummarySchedule from '../EnrolmentSummary/EnrolmentSummarySchedule/EnrolmentSummarySchedule';
 
 /*
  * Short enrolment summary. Appears when at least one subject selected.
@@ -15,7 +16,7 @@ import EnrolmentSummarySubject from './EnrolmentSummarySubject/EnrolmentSummaryS
 
 const priceFormater = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
 
-const enrolmentSummary = (props) => {
+const scheduleSelection = (props) => {
 
   // Displays component only with courses list.
   if (!props.showCourses) {
@@ -29,62 +30,65 @@ const enrolmentSummary = (props) => {
   // Displays selected course and confirm button only when at least one course is selected..
   if (props.selectedSubjects && props.selectedSubjects.length > 0) {
     subjects = props.selectedSubjects.map(subject => (
-      <li className='list-group-item' key={subject.nationalCode}>
-        <EnrolmentSummarySubject
+      <tr key={subject.nationalCode}>
+        <EnrolmentSummarySchedule
           subjectCode={subject.subjectCode}
           subjectName={subject.subjectName}
-          subjectPrice={subject.price}
+          tafeCode ={subject.tafeCode}
+          time={subject.time}
+          scheduleTimes={subject.scheduleTimes}
           removeSubject={props.subjectSelectionChangedHandler
             .bind(this, subject.parentSemester, subject.nationalCode)}
         />
-      </li>
+      </tr>
 
 
     ));
 
 
 
-    confirmButton = (
-      <button className='btn btn-success btn-lg btn-block'>Confirm</button>
-    );
+
 
   }
 
+
+
   return (
     <section>
-      <div className='card shadow my-3'>
-        <div className='card-body summary-card-header'>
-          <h3 className='card-title'>Selected subjects:</h3>
-          <p className='card-text'>
-            You have selected {props.selectedSubjects.length} of {props.minNumberOfCourses} required courses.
-          </p>
-          <p className='card-text'>
-            Your total is {priceFormater.format(props.selectedSubjects.reduce((total, current) => total + current.price,0))}
-          </p>
+      <div className="card shadow my-3">
+        <div className="card-body">
+          <h2>Select Schedule</h2>
+          <br />
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Option 1</th>
+                <th scope="col">Option 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subjects}
+            </tbody>
+          </table>
+
+          <button className='btn btn-success btn-lg btn-block'>Confirm</button>
+
+
         </div>
-
-        <ul className='list-group list-group-flush'>
-          {subjects}
-        </ul>
-
-        <div className='card-body'>
-          {confirmButton}
-        </div>
-
       </div>
+
     </section>
+
   );
-};
 
 
+}
 
-enrolmentSummary.propTypes = {
+scheduleSelection.propTypes = {
   selectedSubjects: PropTypes.array,
-  minNumberOfCourses: PropTypes.number,
-  subjectSelectionChangedHandler: PropTypes.func,
   showCourses: PropTypes.bool,
 };
 
 
-
-export default enrolmentSummary;
+export default scheduleSelection;

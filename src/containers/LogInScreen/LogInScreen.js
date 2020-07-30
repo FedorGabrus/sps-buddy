@@ -12,14 +12,14 @@ const LogIn = (props) => {
   // Component's states.
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState("false");
   const [helperText, setHelperText] = useState('');
   const [error, setError] = useState(false);
 
 
   /**
    * Updates userEmail state on Email input's value change.
-   * 
+   *
    * @param {event} event User's email input onCHange event.
    */
   const emailInputOnChangeHandler = (event) => {
@@ -28,7 +28,7 @@ const LogIn = (props) => {
 
   /**
    * Updates userPassword state on Password input's value change.
-   * 
+   *
    * @param {event} event User's password input onCHange event.
    */
   const passwordInputOnChangeHandler = (event) => {
@@ -43,14 +43,14 @@ const LogIn = (props) => {
 
       setError(false);
       setHelperText('Successful Credentials');
-      setLoggedIn(true);
+      setLoggedIn("true");
     }
 
     else {
 
       setError(true);
       setHelperText('Incorrect username or password (admin@admin.com / admin)');
-      setLoggedIn(false);
+      setLoggedIn("false");
     }
 
   }
@@ -86,7 +86,8 @@ const LogIn = (props) => {
           <button type="button" className="btn mt-4 btn-outline-primary col-sm-6 btn-lg btn-back btn-block"><FontAwesomeIcon icon="chevron-left" /> Back to TAFE SA</button>
         </a>
 
-        <p>User is logged in: {isLoggedIn}</p>
+        <p>{isLoggedIn}</p>
+        <h1>Hello, {props.logInStatus}</h1>;
 
       </div>
     </div>
