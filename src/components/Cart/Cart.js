@@ -15,7 +15,6 @@ const Cart = (props) => {
   
 
   return (
-    <>
      <FontAwesomeIcon icon="shopping-cart" className="shoppingCartIcon" onClick={handleShow}/>
 
      <Modal show={show} onHide={handleClose}>
