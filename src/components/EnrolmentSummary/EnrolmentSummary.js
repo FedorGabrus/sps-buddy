@@ -35,7 +35,7 @@ const enrolmentSummary = (props) => {
           subjectName={subject.subjectName}
           subjectPrice={subject.price}
           removeSubject={props.subjectSelectionChangedHandler
-            .bind(this, subject.parentSemester, subject.nationalCode)}
+            .bind(this, subject.parentSemester, subject.nationalCode)} 
         />
       </li>
 

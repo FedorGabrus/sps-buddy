@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Renders selected subject in enrolment summary.
@@ -22,7 +24,8 @@ const enrolmentSummarySubject = (props) => (
       type="button"
       onClick={props.removeSubject}
     >
-      <FontAwesomeIcon icon='times' /> Remove
+      <FontAwesomeIcon icon="times" /> Remove
+
     </button>
   </div>
 

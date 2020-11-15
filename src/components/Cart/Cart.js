@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
-import EnrolmentScreen from '../../containers/EnrolmentScreen/EnrolmentScreen';
+//import EnrolmentScreen from '../../containers/EnrolmentScreen/EnrolmentScreen';
 import EnrolmentSummary from '../EnrolmentSummary/EnrolmentSummary';
-import Subject from '../Subjects/Subjects';
+//import Subject from '../Subjects/Subjects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Cart = (props) => {
@@ -12,7 +12,7 @@ const Cart = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
 
   return (
      <FontAwesomeIcon icon="shopping-cart" className="shoppingCartIcon" onClick={handleShow}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /**
  * Renders selected subject in enrolment summary.
@@ -26,12 +26,12 @@ const enrolmentSummarySchedule = (props) => (
 
 
 enrolmentSummarySchedule.propTypes = {
-  subjectCode: PropTypes.string,
+  //subjectCode: PropTypes.string,
   subjectName: PropTypes.string,
-  subjectPrice: PropTypes.number,
-  subjectSchedule: PropTypes.string,
-  tafeCode: PropTypes.string,
-  time: PropTypes.string,
+  //subjectPrice: PropTypes.number,
+  //subjectSchedule: PropTypes.string,
+  //tafeCode: PropTypes.string,
+  //time: PropTypes.string,
   scheduleTimes: PropTypes.array,
 };
 

@@ -5,7 +5,7 @@ import "react-toggle/style.css";
 
 /**
  * Toggle switch UI element from Bootstrap.
- * 
+ *
  * @param {*} props isChecked - boolean represents current state (on/off),
  *                  switchToggledHandler - function that handles click on a switcher,
  *                  label - optional string label for switch.

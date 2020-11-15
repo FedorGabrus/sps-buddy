@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LandingPage = ({ component }) => {
 
-  const [viewClassName, setViewClassName] = useState(false);
+  const [viewClassName, setViewClassName] = useState(false); //default as lecturer
 
   //state of views
   var currentView;
@@ -19,7 +19,7 @@ const LandingPage = ({ component }) => {
   var thirdIcon;
 
 
-
+  //lecturer view
   if(viewClassName === false){
 
     currentView = "Lecturer";
@@ -33,6 +33,7 @@ const LandingPage = ({ component }) => {
 
   }
 
+  //student view
   else{
 
     currentView = "Student";
@@ -69,7 +70,7 @@ const LandingPage = ({ component }) => {
 
             <div className="col-md-4 first">
               <div className="wrapper">
-                <div class="overlay">
+                <div className="overlay">
                   <div>
                     <h2>{firstHeader}</h2>
                     <p><FontAwesomeIcon icon={firstIcon} /></p>
@@ -80,7 +81,7 @@ const LandingPage = ({ component }) => {
 
             <div className="col-md-4 second">
               <div className="wrapper">
-                <div class="overlay">
+                <div className="overlay">
                   <div>
                     <h2>{secondHeader}</h2>
                     <p><FontAwesomeIcon icon={secondIcon} /></p>
@@ -91,7 +92,7 @@ const LandingPage = ({ component }) => {
 
             <div className="col-md-4 third">
               <div className="wrapper">
-                <div class="overlay">
+                <div className="overlay">
                   <div>
                     <h2>{thirdHeader}</h2>
                     <p><FontAwesomeIcon icon={thirdIcon} /></p>
